@@ -52,7 +52,7 @@ const Products = () => {
 const Accordian = () => {
   return (
     <>
-      <Title>Accordian</Title>
+    
       
     </>
   );
