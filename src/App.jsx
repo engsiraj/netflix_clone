@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Title, Text, SmallText,Button, TitleCenter, TextCenter,NavSection, } from './Styled Components/Util'
+import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator } from './Styled Components/Util'
 import logo from './asset/logo.png'
 
 function App() {
@@ -9,10 +9,12 @@ function App() {
       <Main>
         <Nav />
         <Header />
+        <Form/>
       </Main>
-      {/* <Products />
+      <Separator />
+    
       <Accordian />
-      <Footer/>  */}
+      <Footer/>
     </>
   )
 }
@@ -28,7 +30,7 @@ const Nav = () => {
     <>
       <NavSection>
         <img src={logo} alt="NetFlix.logo" />
-        <Button>sign in</Button>
+        <Button>Sign in</Button>
       </NavSection>
     </>
   );
@@ -36,24 +38,34 @@ const Nav = () => {
 const Header = () => {
   return (
     <>
-      <TitleCenter>Unlimited movies, TV shows, and more.</TitleCenter>
-      <TextCenter>Watch anywhere. Cancel anytime. </TextCenter>
+      <HeaderMain>
+        <Title>Unlimited movies, TV shows, and more.</Title>
+        <Text>Watch anywhere. Cancel anytime. </Text>
+      </HeaderMain>
     </>
     
   );
 }
-const Products = () => {
+const Form = () => {
   return (
     <>
-      <Title>products </Title>
+      <FormMain>
+        <SmallText>Ready to watch? Enter your email to create or restart your membership.</SmallText>
+        <FormSec>
+          <FormInput type='text' placeholder='Email address'/>
+          <FormButton>Get Started › </FormButton>
+        </FormSec>
+      </FormMain>
+
     </>
   );
 }
+
 const Accordian = () => {
   return (
     <>
-    
-      
+      <Title>Accordian</Title>
+
     </>
   );
 }
