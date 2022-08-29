@@ -1,5 +1,5 @@
 import React ,{ useState } from 'react'
-import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator,ProSec, ProCont,FaqSec,AccSec,AccItem,AccCont } from './Styled Components/Util'
+import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator,ProSec, ProCont,FaqSec,AccSec,AccItem,AccCont,HeadContainer, FooterSec,Card,Cards, FooterTitle, FooterText } from './Styled Components/Util'
 import logo from './asset/logo.png'
 import ProOne from './asset/pro1.png'
 import ProTwo from './asset/pro2.png'
@@ -12,20 +12,20 @@ function App() {
     <>
       <Main>
         <Nav />
-        <Header />
-        <Form />
+        <HeadContainer>
+          <Header />
+          <Form />
+        </HeadContainer> 
       </Main>
       <Separator />
       <Products />
-      <Faq   /> 
+      <Faq /> 
+      <Footer/>
     </>
   )
 }
 
 export default App
-
-
-
 
 
 const Nav = () => {
@@ -169,8 +169,9 @@ const Faq = () => {
   return (
     <>
       <FaqSec>
-        <Title>React Accordion Demo</Title>
+        <Title>Frequently Asked Questions</Title>
         <Accordian />
+        <Form />
       </FaqSec>
       <Separator />
     </>
@@ -178,7 +179,88 @@ const Faq = () => {
   );
 }
 
+const Footer = () => {
+ const FooterData=[{
+    id: 1,
+    link: 'this is link',
+  },
+  {
+    id: 2,
+    link: 'this is link',
+  },
+  {
+    id: 3,
+    link: 'this is link',
+  },
+  {
+    id: 4,
+    link: 'this is link',
+  },
+  {
+    id: 5,
+    link: 'this is link',
+  },
+  {
+    id: 6,
+    link: 'this is link',
+  },
+  {
+    id: 7,
+    link: 'this is link',
+  },
 
+  {
+    id: 8,
+    link: 'this is link',
+  },
+
+  {
+    id: 9,
+    link: 'this is link',
+  },
+  {
+    id: 10,
+    link: 'this is link',
+  },
+  {
+    id: 11,
+    link: 'this is link',
+  },
+  {
+    id: 12,
+    link: 'this is link',
+  },
+  {
+    id: 13,
+    link: 'this is link',
+  },
+  {
+    id: 14,
+    link: 'this is link',
+  },
+  {
+    id: 15,
+    link: 'this is link',
+  }, 
+];
+
+  const FooterLink = FooterData.map(footer => <Card key={footer.id}>
+    <FooterText><a href="">{footer.link}</a></FooterText>
+  </Card> )
+  
+  return (
+    <>
+      <FooterSec>
+        <FooterTitle>this is Footer Section</FooterTitle>
+        <Cards>
+          {FooterLink}
+        </Cards>
+        <Footer>this is Footer Section</Footer>
+      </FooterSec>
+    </>
+
+  );
+}
 
 
 

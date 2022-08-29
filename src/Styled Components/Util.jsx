@@ -13,22 +13,28 @@ export const NavSection = styled.div`
 `
 //Header
 export const Main = styled.div`
-  height: 100vh;
   background-image:radial-gradient(circle, rgba(0,0,0,0.345) 0%, rgba(0,0,0,0.9) 98%),url('https://assets.nflxext.com/ffe/siteui/vlv3/ac824598-245b-4828-b14f-5cff9074f4d0/07cb94b1-5311-4059-9df9-8297cff0bede/PK-en-20220822-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
   background-size: cover;
   background-repeat:no-repeat;
   text-align: center;
 `
+//container 
+export const HeadContainer = styled.div`
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 auto; 
+    width:60%;
+`
 export const HeaderMain = styled.div`
-  padding-top:120px;
-  width:40%;
+  width:80%;
   margin:0 auto;
 `
 //form
 export const FormMain = styled.div`
-  margin:0 auto;
   padding-top:20px;
-  width:60%; 
+  width:100%; 
 `
 export const FormSec = styled.div`
   margin-top:10px;
@@ -101,14 +107,49 @@ export const AccCont = styled.div`
   margin-bottom: 2px;
 `
 //Footer
+export const FooterSec = styled.div`
+  margin:0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 70%;
+  color:white;
 
-
-
-
+`
+export const FooterText = styled.p`
+  font-size: 13px;
+    color:ffffff;
+`
+export const FooterTitle = styled.p`
+  font-size: 16px;
+  color:ffffff;
+`
+export const Card = styled.div`
+  a{
+    cursor:pointer;
+    color:#ffffff;
+    text-decoration: none;
+    :hover{
+      text-decoration: underline;
+    }
+  }
+`
+export const Cards = styled.div`
+  margin-top: 20px;
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 900px){
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  @media (max-width: 600px){
+    grid-template-columns: repeat(2, 1fr); 
+  }
+`
 //separator
 
 export const Separator = styled.div`
-  height: 10px;
+  height: 8px;
   background: #222222;
 `
 
