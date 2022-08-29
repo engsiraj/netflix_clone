@@ -98,53 +98,51 @@ export const AccItem = styled.div`
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #222222;
+  background-color: #303030;
 `
 export const AccCont = styled.div`
   margin-top:-7px;
   padding: 20px;
-  background-color: #222222;
+  background-color:#303030;
   margin-bottom: 2px;
 `
-//Footer
+//footer
 export const FooterSec = styled.div`
   margin:0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   width: 70%;
-  color:white;
-
-`
-export const FooterText = styled.p`
-  font-size: 13px;
-    color:ffffff;
 `
 export const FooterTitle = styled.p`
   font-size: 16px;
-  color:ffffff;
+  color:#737373;
+  :hover{
+       text-decoration: underline;
+    }
 `
 export const Card = styled.div`
-  a{
+   a{
+    font-size: 13px;
+    color:#737373;
     cursor:pointer;
-    color:#ffffff;
     text-decoration: none;
     :hover{
-      text-decoration: underline;
+       text-decoration: underline;
     }
-  }
-`
+  } 
+  `
 export const Cards = styled.div`
   margin-top: 20px;
   display: grid;
   gap: 0.5rem;
   margin-bottom: 20px;
   grid-template-columns: repeat(4, 1fr);
-  @media (max-width: 900px){
-    grid-template-columns: repeat(3, 1fr); 
-  }
-  @media (max-width: 600px){
-    grid-template-columns: repeat(2, 1fr); 
-  }
+@media (max-width: 900px){
+  grid-template-columns: repeat(3, 1fr); 
+}
+@media (max-width: 600px){
+  grid-template-columns: repeat(2, 1fr); 
+}
 `
 //separator
 
