@@ -1,6 +1,10 @@
 import React from 'react'
-import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator } from './Styled Components/Util'
+import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator,ProSec, ProCont,FaqSec,FaqMain } from './Styled Components/Util'
 import logo from './asset/logo.png'
+import ProOne from './asset/pro1.png'
+import ProTwo from './asset/pro2.png'
+import ProThree from './asset/pro3.png'
+import ProFour from './asset/pro4.png'
 
 function App() {
  
@@ -9,12 +13,11 @@ function App() {
       <Main>
         <Nav />
         <Header />
-        <Form/>
+        <Form />
       </Main>
       <Separator />
-    
-      <Accordian />
-      <Footer/>
+      <Products />
+      <Footer /> 
     </>
   )
 }
@@ -61,20 +64,56 @@ const Form = () => {
   );
 }
 
-const Accordian = () => {
-  return (
-    <>
-      <Title>Accordian</Title>
+const Products = () => {
+  const Prodata = [{
+      id: 1,
+    head: 'Enjoy on your TV.',
+    para: 'Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.',
+      image: ProOne,
+    },
+    {
+      id: 2,
+      head: 'Download your shows to watch offline.',
+      para: 'Save your favorites easily and always have something to watch.',
+      image: ProTwo,
 
-    </>
+    },
+    {
+      id: 3,
+      head: 'Watch everywhere.',
+      para: 'Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.',
+      image: ProFour,
+    },
+    {
+      id: 4,
+      head: 'Create profiles for kids.',
+      para: 'Send kids on adventures with their favorite characters in a space made just for them—free with your membership.',
+      image: ProThree,
+    },
+  ]
+  const ProSections = Prodata.map(pro =>
+    <div key = {pro.id}>
+      <ProCont layout={pro.id % 2 === 0 &&'row-reverse'}>
+        <ProSec>
+          <Title>{pro.head}</Title>
+          <Text>{pro.para}</Text>
+        </ProSec>
+        <img src={pro.image} alt="Image.NotFound" />
+      </ProCont>
+      <Separator />
+    </div>
+  )
+    return (
+      <>{ProSections}</>
   );
 }
-const Footer = () => {
+const Faq = () => {
   return (
-    <>
-      <Title>Footer</Title>
-    
-    </>
+    <FaqSec>
+      <FaqMain>
+        <Title>Faq</Title>
+      </FaqMain>
+    </FaqSec>
   );
 }
 

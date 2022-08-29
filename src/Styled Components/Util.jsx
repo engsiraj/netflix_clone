@@ -54,12 +54,37 @@ export const FormButton = styled.button`
     background-color: #ed000c;
    }
 `
+//Products
+export const ProCont = styled.div`
+  padding:2% 6%;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: ${({layout})=>layout||'row'};
+  img{
+    width: 45%;
+  }
+`
+export const ProSec = styled.div`
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+`
+
+
+
+
+
+
+
+
 //separator
 
 export const Separator = styled.div`
   height: 10px;
-  background: #272727;
+  background: #222222;
 `
+
 
 //text
 export const Title = styled.p`
