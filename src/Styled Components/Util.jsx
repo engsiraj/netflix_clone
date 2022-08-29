@@ -70,10 +70,37 @@ export const ProSec = styled.div`
  flex-direction: column;
  justify-content: center;
 `
+//Faq
 
-
-
-
+export const FaqSec = styled.div`
+  width:60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:50px;
+  color:white;
+`
+export const AccSec = styled.div`
+  max-width: 100%;
+  margin: 2rem auto;
+  text-align: left;
+`
+export const AccItem = styled.div`
+  margin-bottom:8px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #222222;
+`
+export const AccCont = styled.div`
+  margin-top:-7px;
+  padding: 20px;
+  background-color: #222222;
+  margin-bottom: 2px;
+`
+//Footer
 
 
 

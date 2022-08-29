@@ -1,5 +1,5 @@
-import React from 'react'
-import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator,ProSec, ProCont,FaqSec,FaqMain } from './Styled Components/Util'
+import React ,{ useState } from 'react'
+import { Main, Title, Text, SmallText, Button, NavSection, HeaderMain, FormMain, FormSec, FormInput, FormButton, Separator,ProSec, ProCont,FaqSec,AccSec,AccItem,AccCont } from './Styled Components/Util'
 import logo from './asset/logo.png'
 import ProOne from './asset/pro1.png'
 import ProTwo from './asset/pro2.png'
@@ -17,7 +17,7 @@ function App() {
       </Main>
       <Separator />
       <Products />
-      <Footer /> 
+      <Faq   /> 
     </>
   )
 }
@@ -91,8 +91,10 @@ const Products = () => {
       image: ProThree,
     },
   ]
+
+  
   const ProSections = Prodata.map(pro =>
-    <div key = {pro.id}>
+   <div key = {pro.id}>
       <ProCont layout={pro.id % 2 === 0 &&'row-reverse'}>
         <ProSec>
           <Title>{pro.head}</Title>
@@ -107,13 +109,76 @@ const Products = () => {
       <>{ProSections}</>
   );
 }
-const Faq = () => {
+
+
+
+const Accordian = () => {
+  const accordionData = [
+    {
+      title: 'Section 1',
+      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+      laborum cupiditate possimus labore, hic temporibus velit dicta earum
+      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+      voluptatem.`
+    },
+    {
+      title: 'Section 2',
+      content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
+      reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
+      quaerat iure quos dolorum accusantium ducimus in illum vero commodi
+      pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
+      quidem maiores doloremque est numquam praesentium eos voluptatem amet!
+      Repudiandae, mollitia id reprehenderit a ab odit!`
+    },
+    {
+      title: 'Section 3',
+      content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+      quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+      dolor ut sequi minus iste? Quas?`
+    }
+  ];
+
+
   return (
-    <FaqSec>
-      <FaqMain>
-        <Title>Faq</Title>
-      </FaqMain>
-    </FaqSec>
+    <>
+      <AccSec>
+        {accordionData.map(({ title, content }) => (
+          <AccordionItem title={title} content={content} />
+        ))}
+      </AccSec>
+    </>
+  );
+};
+
+const AccordionItem = ({ title, content }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <>
+      <AccItem onClick={() => setIsActive(!isActive)}>
+        <Text>{title}</Text>
+        <Text>{isActive ? '×' : '+'}</Text>
+      </AccItem>
+      {isActive && <AccCont><Text>{content}</Text></AccCont>}
+    </>
+  );
+};
+
+const Faq = () => {
+
+  return (
+    <>
+      <FaqSec>
+        <Title>React Accordion Demo</Title>
+        <Accordian />
+      </FaqSec>
+      <Separator />
+    </>
+    
   );
 }
+
+
+
+
 
