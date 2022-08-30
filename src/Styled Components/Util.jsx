@@ -1,5 +1,43 @@
 import styled from "styled-components";
 
+
+
+
+
+//text
+export const Title = styled.p`
+    color:#ffffff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+    @media (max-width: 900px){
+      font-size: 40px; }
+    @media (max-width: 700px){
+      font-size: 28px; }
+`
+export const Text = styled.p`
+    color:#ffffff;
+    font-size: 26px;
+    font-weight: 400;
+    @media (max-width: 900px){
+      font-size: 20px; }
+`
+export const SmallText = styled.p`
+    color:#ffffff;
+    font-size:19px;
+    font-weight: 400;
+    @media (max-width: 900px){
+      font-size: 18px; }
+    `
+
+
+
+
+
+
+
 //Sections
 
 //Nav
@@ -9,8 +47,34 @@ export const NavSection = styled.div`
   margin:0px 42px;
   img{
     width:145px;
+   
   }
+  @media (max-width: 703px){
+      margin:0px 0px;
+}
+  @media (max-width: 521px){
+      margin:-10px 0px;
+}
 `
+
+
+//Nav Button
+export const Button = styled.button`
+    display: inline-block;
+    margin: 30px;
+    padding: 5px 15px;
+    background-color: #dc0510;
+    border:none;
+    border-radius:4px;
+    outline:none;
+    color:#ffffff;
+    font-weight: 400;
+    cursor:pointer;
+`
+
+
+
+
 //Header
 export const Main = styled.div`
   background-image:radial-gradient(circle, rgba(0,0,0,0.345) 0%, rgba(0,0,0,0.9) 98%),url('https://assets.nflxext.com/ffe/siteui/vlv3/ac824598-245b-4828-b14f-5cff9074f4d0/07cb94b1-5311-4059-9df9-8297cff0bede/PK-en-20220822-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
@@ -18,6 +82,11 @@ export const Main = styled.div`
   background-repeat:no-repeat;
   text-align: center;
 `
+
+
+
+
+
 //container 
 export const HeadContainer = styled.div`
     height: 87vh;
@@ -26,11 +95,21 @@ export const HeadContainer = styled.div`
     justify-content: center;
     margin:0 auto; 
     width:60%;
+    @media (max-width: 930px){
+      width:79%;}
+    @media (max-width: 703px){
+      width:95%;
+}
 `
 export const HeaderMain = styled.div`
   width:80%;
   margin:0 auto;
 `
+
+
+
+
+
 //form
 export const FormMain = styled.div`
   padding-top:20px;
@@ -45,21 +124,43 @@ export const FormInput = styled.input`
   font-size: 19px;
   font-weight: 400;
   outline: none;
+  @media (max-width: 900px){
+      width:90%;
+    }
+  @media (max-width: 700px){
+     padding:10px 6px; 
+      font-size: 16px;}
 `
 export const FormButton = styled.button`
   width:25%;
   background-color: #dc0510;
   color:#ffffff;
   cursor:pointer;
-  font-size: 26px;
-  padding-top:8px;
-  padding-bottom:12px;
-   outline: none;
-   border:1px solid #6f6f6f;
-   :hover{
+  font-size: 20px;
+  padding-top:13px;
+  padding-bottom:15px;
+  outline: none;
+  border:1px solid #6f6f6f;
+      @media (max-width: 900px){
+      margin-top:20px;
+      font-size: 18px;
+      width:40%;}
+      @media (max-width: 700px){
+      padding-top:10px;
+      font-size: 16px;
+      padding-bottom:11px;
+      margin-top:20px;
+      width:35%;}
+  :hover{
     background-color: #ed000c;
    }
+   
 `
+
+
+
+
+
 //Products
 export const ProCont = styled.div`
   padding:2% 6%;
@@ -68,16 +169,31 @@ export const ProCont = styled.div`
   flex-direction: ${({layout})=>layout||'row'};
   img{
     width: 45%;
-  }
+    @media(max-width:900px){width:75%;}
+    @media(max-width:703px){width:80%;}
+    @media(max-width:521px){width:100%;}
+}
+  @media (max-width: 900px){
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    padding:10%;
+    }
 `
 export const ProSec = styled.div`
  width: 50%;
  display: flex;
  flex-direction: column;
  justify-content: center;
+ @media (max-width: 900px){
+       width: 90%;
+  }
 `
-//Faq
 
+
+
+
+//Faq
 export const FaqSec = styled.div`
   width:60%;
   margin: 0 auto;
@@ -85,6 +201,15 @@ export const FaqSec = styled.div`
   margin-top:50px;
   margin-bottom:50px;
   color:white;
+  
+  @media (max-width: 900px){
+  width:80%; }
+   @media (max-width: 703px){
+       width: 95%;    
+   }
+   @media (max-width: 521px){
+       width: 100%;    
+   }
 `
 export const AccSec = styled.div`
   max-width: 100%;
@@ -106,6 +231,12 @@ export const AccCont = styled.div`
   background-color:#303030;
   margin-bottom: 2px;
 `
+
+
+
+
+
+
 //footer
 export const FooterSec = styled.div`
   margin:0 auto;
@@ -137,50 +268,20 @@ export const Cards = styled.div`
   gap: 0.5rem;
   margin-bottom: 20px;
   grid-template-columns: repeat(4, 1fr);
-@media (max-width: 900px){
-  grid-template-columns: repeat(3, 1fr); 
-}
-@media (max-width: 600px){
-  grid-template-columns: repeat(2, 1fr); 
-}
+  @media (max-width: 900px){
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  @media (max-width: 600px){
+    grid-template-columns: repeat(2, 1fr); 
+  }
 `
-//separator
 
+
+
+
+//separator
 export const Separator = styled.div`
   height: 8px;
   background: #222222;
 `
 
-
-//text
-export const Title = styled.p`
-    color:#ffffff;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: -1.5px;
-    margin-bottom: 15px;
-`
-export const Text = styled.p`
-    color:#ffffff;
-    font-size: 26px;
-    font-weight: 400;
-`
-export const SmallText = styled.p`
-    color:#ffffff;
-    font-size:19px;
-    font-weight: 400;
-`
-//Nav Button
-export const Button = styled.button`
-    display: inline-block;
-    margin: 30px;
-    padding: 5px 15px;
-    background-color: #dc0510;
-    border:none;
-    border-radius:4px;
-    outline:none;
-    color:#ffffff;
-    font-weight: 400;
-    cursor:pointer;
-`
