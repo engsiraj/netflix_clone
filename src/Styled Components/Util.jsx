@@ -1,9 +1,4 @@
 import styled from "styled-components";
-
-
-
-
-
 //text
 export const Title = styled.p`
     color:#ffffff;
@@ -31,13 +26,6 @@ export const SmallText = styled.p`
     @media (max-width: 900px){
       font-size: 18px; }
     `
-
-
-
-
-
-
-
 //Sections
 
 //Nav
@@ -56,8 +44,6 @@ export const NavSection = styled.div`
       margin:-10px 0px;
 }
 `
-
-
 //Nav Button
 export const Button = styled.button`
     display: inline-block;
@@ -71,10 +57,6 @@ export const Button = styled.button`
     font-weight: 400;
     cursor:pointer;
 `
-
-
-
-
 //Header
 export const Main = styled.div`
   background-image:radial-gradient(circle, rgba(0,0,0,0.345) 0%, rgba(0,0,0,0.9) 98%),url('https://assets.nflxext.com/ffe/siteui/vlv3/ac824598-245b-4828-b14f-5cff9074f4d0/07cb94b1-5311-4059-9df9-8297cff0bede/PK-en-20220822-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
@@ -82,11 +64,6 @@ export const Main = styled.div`
   background-repeat:no-repeat;
   text-align: center;
 `
-
-
-
-
-
 //container 
 export const HeadContainer = styled.div`
     height: 87vh;
@@ -105,11 +82,6 @@ export const HeaderMain = styled.div`
   width:80%;
   margin:0 auto;
 `
-
-
-
-
-
 //form
 export const FormMain = styled.div`
   padding-top:20px;
@@ -156,11 +128,6 @@ export const FormButton = styled.button`
    }
    
 `
-
-
-
-
-
 //Products
 export const ProCont = styled.div`
   padding:2% 6%;
@@ -189,10 +156,6 @@ export const ProSec = styled.div`
        width: 90%;
   }
 `
-
-
-
-
 //Faq
 export const FaqSec = styled.div`
   width:60%;
@@ -231,12 +194,6 @@ export const AccCont = styled.div`
   background-color:#303030;
   margin-bottom: 2px;
 `
-
-
-
-
-
-
 //footer
 export const FooterSec = styled.div`
   margin:0 auto;
@@ -275,13 +232,8 @@ export const Cards = styled.div`
     grid-template-columns: repeat(2, 1fr); 
   }
 `
-
-
-
-
 //separator
 export const Separator = styled.div`
   height: 8px;
   background: #222222;
 `
-
